@@ -18,28 +18,28 @@ namespace TencentCloud\Cloudhsm\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetVsmMonitorInfo请求参数结构体
+ * VSM摘要信息
  *
- * @method string getResourceId() 获取<p>资源Id</p>
- * @method void setResourceId(string $ResourceId) 设置<p>资源Id</p>
- * @method string getResourceName() 获取<p>资源名称</p>
- * @method void setResourceName(string $ResourceName) 设置<p>资源名称</p>
+ * @method integer getDigestVer() 获取<p>计数</p>
+ * @method void setDigestVer(integer $DigestVer) 设置<p>计数</p>
+ * @method string getValue() 获取<p>摘要值</p>
+ * @method void setValue(string $Value) 设置<p>摘要值</p>
  */
-class GetVsmMonitorInfoRequest extends AbstractModel
+class VsmDigestItem extends AbstractModel
 {
     /**
-     * @var string <p>资源Id</p>
+     * @var integer <p>计数</p>
      */
-    public $ResourceId;
+    public $DigestVer;
 
     /**
-     * @var string <p>资源名称</p>
+     * @var string <p>摘要值</p>
      */
-    public $ResourceName;
+    public $Value;
 
     /**
-     * @param string $ResourceId <p>资源Id</p>
-     * @param string $ResourceName <p>资源名称</p>
+     * @param integer $DigestVer <p>计数</p>
+     * @param string $Value <p>摘要值</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class GetVsmMonitorInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists("DigestVer",$param) and $param["DigestVer"] !== null) {
+            $this->DigestVer = $param["DigestVer"];
         }
 
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }
